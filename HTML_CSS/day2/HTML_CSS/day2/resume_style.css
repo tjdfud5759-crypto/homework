@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #1f2937;
+    color: white;
+    padding: 40px 20px;
+}
+
+.profile_box {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile_img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.job_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d1d5db;
+}
+
+.github_link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: white;
+    color: #1f2937;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.github_link:hover {
+    background-color: #e5e7eb;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+    color: #111827;
+}
+
+ul, ol {
+    padding-left: 24px;
+}
+
+.skill_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill_list span {
+    background-color: #e0f2fe;
+    color: #075985;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f3f4f6;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact_form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 180px;
+    padding: 12px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #374151;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2937;
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .profile_box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile_img {
+        width: 130px;
+        height: 130px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
