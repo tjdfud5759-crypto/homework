@@ -1,179 +1,560 @@
+/* 모든 요소의 크기 계산 방식을 통일 */
 * {
     box-sizing: border-box;
 }
 
+/* 메뉴를 클릭했을 때 부드럽게 이동 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 전체 웹페이지 */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
+    text-align: left;
+
+    font-family:
+        'Pretendard',
+        -apple-system,
+        BlinkMacSystemFont,
+        system-ui,
+        Roboto,
+        'Helvetica Neue',
+        'Segoe UI',
+        'Apple SD Gothic Neo',
+        'Noto Sans KR',
+        'Malgun Gothic',
+        sans-serif;
+
     line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f8;
+
+    padding: 0 0 0 220px;
+    margin: 0;
 }
 
-.header {
+/* 왼쪽 사이드 메뉴 */
+.sidebar {
     background-color: #1f2937;
-    color: white;
-    padding: 40px 20px;
+    color: #ffffff;
+
+    width: 220px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    padding-top: 45px;
 }
 
-.profile_box {
-    max-width: 1000px;
-    margin: 0 auto;
+/* 사이드 메뉴 내부 */
+.sidebar-container {
+    padding: 0 25px;
+}
+
+/* 사이드 메뉴 이름 */
+.sidebar-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+
+/* 사이드 메뉴 목록 */
+.sidebar-menu {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
     display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* 사이드 메뉴 링크 */
+.sidebar-menu li a {
+    display: block;
+
+    color: #d1d5db;
+
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 0.95em;
+
+    padding: 8px 0;
+
+    transition:
+        color 0.3s,
+        transform 0.3s;
+}
+
+/* 마우스를 올렸을 때 */
+.sidebar-menu li a:hover {
+    color: #60a5fa;
+    transform: translateX(5px);
+}
+
+/* 이력서 전체 종이 영역 */
+.container {
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    background-color: #ffffff;
+
+    padding: 45px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+
+    border-radius: 10px;
+
+    min-height: calc(100vh - 80px);
+}
+
+/* 이력서 상단 */
+#resume-header {
+    border-bottom: 2px solid #333333;
+
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+/* 이름과 사진 배치 */
+.header-content {
+    display: flex;
+
+    justify-content: space-between;
     align-items: center;
+
     gap: 30px;
 }
 
-.profile_img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid white;
+/* 이름 */
+#resume-header h1 {
+    margin: 0 0 5px 0;
+
+    font-size: 2.5em;
+
+    color: #222222;
 }
 
-.job_title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #d1d5db;
+/* 지원 직무 */
+.job-title {
+    margin: 0 0 15px 0;
+
+    font-size: 1.05em;
+    font-weight: 600;
+
+    color: #476282;
 }
 
-.github_link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 16px;
-    background-color: white;
-    color: #1f2937;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-.github_link:hover {
-    background-color: #e5e7eb;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.card {
-    background-color: white;
-    margin-bottom: 24px;
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.card h2 {
-    margin-top: 0;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 10px;
-    color: #111827;
-}
-
-ul, ol {
-    padding-left: 24px;
-}
-
-.skill_list {
+/* 연락처 목록 */
+.contact-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+
+    gap: 10px 20px;
 }
 
-.skill_list span {
-    background-color: #e0f2fe;
-    color: #075985;
-    padding: 8px 12px;
+/* 연락처 각각 */
+.contact-container span {
+    color: #666666;
+    font-size: 0.92em;
+}
+
+/* 연락처 아이콘 */
+.contact-container i {
+    width: 18px;
+    color: #555555;
+}
+
+/* 연락처 GitHub 링크 */
+.contact-container a {
+    color: #666666;
+    text-decoration: none;
+
+    transition: color 0.3s;
+}
+
+/* GitHub 링크에 마우스를 올렸을 때 */
+.contact-container a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* 프로필 사진 */
+.profile-photo img {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #eef1f5;
+}
+
+/* 각 영역 */
+section {
+    margin-bottom: 45px;
+
+    scroll-margin-top: 30px;
+}
+
+/* 각 영역 제목 */
+main h2 {
+    font-size: 1.45em;
+
+    border-left: 5px solid #333333;
+
+    padding-left: 14px;
+    margin: 0 0 22px 0;
+
+    color: #222222;
+}
+
+/* 자기소개 */
+#introduce p {
+    color: #555555;
+
+    font-size: 1em;
+
+    margin: 0;
+
+    white-space: pre-line;
+
+    word-break: keep-all;
+}
+
+/* 기술 그룹 */
+.skills-group {
+    margin-bottom: 22px;
+    padding-left: 15px;
+}
+
+/* Language, AI / Data Analysis 등의 제목 */
+.skills-group h3 {
+    font-size: 0.88em;
+
+    color: #888888;
+
+    margin: 0 0 9px 0;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* 기술 태그를 담는 영역 */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+/* 기술 태그 */
+.skill-tag {
+    background-color: #eef2f7;
+    color: #476282;
+
+    padding: 6px 14px;
+
     border-radius: 20px;
-    font-weight: bold;
+
+    font-size: 0.85em;
+    font-weight: 600;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* 프로젝트 한 개 */
+.experience-item {
+    margin-bottom: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* 마지막 프로젝트는 밑줄 제거 */
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+/* 프로젝트 이름과 연도 */
+.experience-info {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: baseline;
+
+    gap: 20px;
+
+    margin-bottom: 5px;
+}
+
+/* 프로젝트 이름 */
+.experience-info .company {
+    font-size: 1.15em;
+    font-weight: 700;
+
+    color: #222222;
+}
+
+/* 프로젝트 연도 */
+.experience-info .period {
+    color: #888888;
+
+    font-size: 0.9em;
+
+    white-space: nowrap;
+}
+
+/* 프로젝트 종류 */
+.experience-item .role {
+    margin-bottom: 10px;
+}
+
+/* Classification, Segmentation 등 */
+.experience-item .position {
+    font-weight: 600;
+
+    color: #476282;
+
+    font-size: 0.95em;
+}
+
+/* 프로젝트 세부 영역 */
+.project {
     margin-top: 12px;
+
+    padding-left: 12px;
+
+    border-left: 2px solid #e5e7eb;
 }
 
-th, td {
-    border: 1px solid #d1d5db;
-    padding: 12px;
+/* 프로젝트 설명 목록 */
+.experience-item .details {
+    margin: 0;
+
+    padding-left: 20px;
+
+    color: #666666;
+
+    font-size: 0.95em;
+
+    word-break: keep-all;
+}
+
+/* 프로젝트 설명 각각 */
+.experience-item .details li {
+    margin-bottom: 6px;
+}
+
+/* 학력 및 자격 표 */
+.education-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-bottom: 10px;
+}
+
+/* 왼쪽 기간 */
+.education-table th {
     text-align: left;
+
+    width: 160px;
+
+    color: #888888;
+
+    font-weight: 400;
+    font-size: 0.9em;
+
+    padding: 12px 0;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid #f0f0f0;
 }
 
-th {
-    background-color: #f3f4f6;
+/* 오른쪽 내용 */
+.education-table td {
+    padding: 12px 0;
+
+    color: #444444;
+
+    font-weight: 500;
+
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.contact_form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+/* 태블릿 또는 화면이 좁아졌을 때 */
+@media screen and (max-width: 900px) {
 
-.contact_form div {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input {
-    padding: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-button {
-    width: 180px;
-    padding: 12px;
-    background-color: #1f2937;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #374151;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1f2937;
-    color: white;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .profile_box {
-        flex-direction: column;
-        text-align: center;
+    body {
+        padding-left: 0;
     }
 
-    .profile_img {
-        width: 130px;
-        height: 130px;
-    }
-
-    table {
-        font-size: 14px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    button {
+    .sidebar {
         width: 100%;
+        height: auto;
+
+        position: sticky;
+        top: 0;
+
+        padding: 0;
+    }
+
+    .sidebar-container {
+        padding: 12px 20px;
+    }
+
+    .sidebar-title {
+        display: none;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 5px 20px;
+    }
+
+    .sidebar-menu li a {
+        padding: 5px 0;
+
+        font-size: 0.88em;
+    }
+
+    .sidebar-menu li a:hover {
+        transform: none;
+    }
+
+    .container {
+        margin: 25px 20px;
+
+        padding: 35px;
+    }
+
+    section {
+        scroll-margin-top: 90px;
+    }
+}
+
+/* 스마트폰 화면 */
+@media screen and (max-width: 600px) {
+
+    .sidebar-menu {
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+    }
+
+    .sidebar-menu li {
+        flex-shrink: 0;
+    }
+
+    .container {
+        margin: 15px 10px;
+
+        padding: 25px 20px;
+
+        border-radius: 5px;
+    }
+
+    .header-content {
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+    }
+
+    .profile-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #resume-header h1 {
+        font-size: 2em;
+    }
+
+    .contact-container {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    main h2 {
+        font-size: 1.3em;
+    }
+
+    .skills-group {
+        padding-left: 5px;
+    }
+
+    .experience-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 3px;
+    }
+
+    .education-table th,
+    .education-table td {
+        display: block;
+
+        width: 100%;
+    }
+
+    .education-table th {
+        padding: 12px 0 2px 0;
+
+        border-bottom: none;
+    }
+
+    .education-table td {
+        padding: 2px 0 12px 0;
+    }
+}
+
+/* 인쇄 또는 PDF로 저장할 때 */
+@media print {
+
+    body {
+        padding-left: 0;
+
+        background-color: #ffffff;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+
+        margin: 0;
+
+        padding: 20px;
+
+        box-shadow: none;
+
+        border-radius: 0;
+    }
+
+    .experience-item {
+        page-break-inside: avoid;
     }
 }
