@@ -1,138 +1,645 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>김상현 이력서</title>
-    <link rel="stylesheet" href="resume_style.css">
+
+    <!-- CSS 파일 연결 -->
+    <link
+        rel="stylesheet"
+        href="resume_style.css"
+    >
+
+    <!-- 아이콘 사용을 위한 Font Awesome 연결 -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 </head>
+
 <body>
 
-    <header class="header">
-        <div class="profile_box">
-            <img src="https://github.com/tjdfud5759-crypto.png" alt="프로필 이미지" class="profile_img">
+    <!-- 왼쪽 메뉴 -->
+    <nav class="sidebar">
 
-            <div>
-                <h1>김상현</h1>
-                <p class="job_title">AI 헬스케어 개발자 지원자</p>
-                <p>의료영상 AI, NLP, 데이터 분석을 공부하고 있습니다.</p>
-                <a href="https://github.com/tjdfud5759-crypto/homework" target="_blank" class="github_link">
-                    GitHub Repository 바로가기
-                </a>
+        <div class="sidebar-container">
+
+            <div class="sidebar-title">
+                김상현
             </div>
-        </div>
-    </header>
 
-    <main class="container">
+            <ul class="sidebar-menu">
 
-        <section class="card">
-            <h2>기본 정보</h2>
-            <ul>
-                <li><strong>이름:</strong> 김상현</li>
-                <li><strong>희망 직무:</strong> AI 헬스케어 개발자</li>
-                <li><strong>관심 분야:</strong> 의료영상 AI, 진료 기록 NLP, 데이터 분석</li>
-                <li><strong>GitHub:</strong> tjdfud5759-crypto</li>
+                <li>
+                    <a href="#resume">
+                        이력서
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#introduce">
+                        자기소개
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        보유 기술
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#portfolio">
+                        포트폴리오
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#education">
+                        학력 및 자격
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://github.com/tjdfud5759-crypto"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </li>
+
             </ul>
-        </section>
 
-        <section class="card">
-            <h2>자기소개</h2>
-            <p>
-                저는 의료 데이터와 인공지능을 연결하는 분야에 관심이 있습니다.
-                현재 컴퓨터 비전 기반 의료영상 분석과 자연어 처리 기반 진료 기록 요약을 학습하고 있습니다.
-            </p>
-            <p>
-                특히 X-ray 분류, 객체탐지, MRI 세그멘테이션, DICOM 전처리와 같은 프로젝트를 통해
-                헬스케어 AI 개발자로 성장하는 것을 목표로 하고 있습니다.
-            </p>
-        </section>
+        </div>
 
-        <section class="card">
-            <h2>기술 스택</h2>
-            <div class="skill_list">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Deep Learning</span>
-                <span>Computer Vision</span>
-                <span>NLP</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Git/GitHub</span>
-            </div>
-        </section>
+    </nav>
 
-        <section class="card">
-            <h2>학습 및 프로젝트 경험</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>구분</th>
-                        <th>내용</th>
-                        <th>활용 기술</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>의료영상 분류</td>
-                        <td>Chest X-ray 기반 질환 분류 프로젝트</td>
-                        <td>Python, CNN, Transfer Learning</td>
-                    </tr>
-                    <tr>
-                        <td>객체탐지</td>
-                        <td>YOLO 기반 흉부 X-ray 이상 부위 탐지</td>
-                        <td>YOLO, Computer Vision</td>
-                    </tr>
-                    <tr>
-                        <td>세그멘테이션</td>
-                        <td>MRI 기반 종양 영역 분할 프로젝트</td>
-                        <td>U-Net, Dice Score</td>
-                    </tr>
-                    <tr>
-                        <td>NLP</td>
-                        <td>진료 기록 요약 프로젝트 학습 예정</td>
-                        <td>Text Preprocessing, Summarization</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- 전체 이력서 영역 -->
+    <div
+        id="resume"
+        class="container"
+    >
 
-        <section class="card">
-            <h2>학습 목표</h2>
-            <ol>
-                <li>CV 포트폴리오 완성</li>
-                <li>NLP 미니 프로젝트 완성</li>
-                <li>GitHub에 프로젝트 정리</li>
-                <li>FastAPI와 Docker를 활용한 모델 서빙 학습</li>
-            </ol>
-        </section>
+        <main>
 
-        <section class="card">
-            <h2>메일 발송 폼</h2>
-            <form class="contact_form">
-                <div>
-                    <label for="email">담당자 이메일</label>
-                    <input id="email" type="email" placeholder="email@example.com">
+            <!-- 기본 정보 -->
+            <section id="resume-header">
+
+                <div class="header-content">
+
+                    <div class="header-text">
+
+                        <h1>김상현</h1>
+
+                        <p class="job-title">
+                            Medical AI Developer
+                        </p>
+
+                        <div class="contact-container">
+
+                            <span>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                010-0000-0000
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                                이메일 주소 입력
+                            </span>
+
+                            <span>
+                                <i class="fa-brands fa-github"></i>
+
+                                <a
+                                    href="https://github.com/tjdfud5759-crypto"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    tjdfud5759-crypto
+                                </a>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- GitHub 프로필 이미지 사용 -->
+                    <div class="profile-photo">
+
+                        <img
+                            src="https://github.com/tjdfud5759-crypto.png"
+                            alt="김상현 프로필 이미지"
+                        >
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <label for="company">회사명</label>
-                    <input id="company" type="text" placeholder="회사명을 입력하세요">
+            </section>
+
+            <!-- 자기소개 -->
+            <section id="introduce">
+
+                <h2>Introduce</h2>
+
+                <p>
+                    생명과학 석사와 난임·배아 연구 경험을 바탕으로 의료 AI 분야를 공부하고 있습니다.
+                    의료 데이터를 이해하고 분석하는 능력과 인공지능 기술을 결합하여 실제 의료 문제를 해결하는 개발자를 목표로 하고 있습니다.
+
+                    흉부 X-ray 결핵 분류, 뇌 MRI 종양 분할, 흉부 이상 소견 탐지,
+                    CT DICOM 전처리, 난임 임신 성공 예측 등의 프로젝트를 수행했습니다.
+
+                    Python과 PyTorch를 활용한 의료영상 분석을 중심으로
+                    데이터 전처리, 모델 학습, 성능 평가 및 결과 해석 과정을 경험했습니다.
+                </p>
+
+            </section>
+
+            <!-- 기술 -->
+            <section id="skills">
+
+                <h2>Skills</h2>
+
+                <div class="skills-group">
+
+                    <h3>Language</h3>
+
+                    <div class="skills-container">
+
+                        <span class="skill-tag">
+                            Python
+                        </span>
+
+                        <span class="skill-tag">
+                            SQL
+                        </span>
+
+                        <span class="skill-tag">
+                            HTML
+                        </span>
+
+                        <span class="skill-tag">
+                            CSS
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <label for="message">메시지</label>
-                    <input id="message" type="text" placeholder="메시지를 입력하세요">
+                <div class="skills-group">
+
+                    <h3>AI / Data Analysis</h3>
+
+                    <div class="skills-container">
+
+                        <span class="skill-tag">
+                            PyTorch
+                        </span>
+
+                        <span class="skill-tag">
+                            Pandas
+                        </span>
+
+                        <span class="skill-tag">
+                            NumPy
+                        </span>
+
+                        <span class="skill-tag">
+                            Scikit-learn
+                        </span>
+
+                        <span class="skill-tag">
+                            OpenCV
+                        </span>
+
+                        <span class="skill-tag">
+                            YOLO
+                        </span>
+
+                        <span class="skill-tag">
+                            ResNet
+                        </span>
+
+                        <span class="skill-tag">
+                            U-Net
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <button type="submit">이력서 전송하기</button>
-            </form>
-        </section>
+                <div class="skills-group">
 
-    </main>
+                    <h3>Database</h3>
 
-    <footer class="footer">
-        <p>© 2026 김상현 Resume Page</p>
-    </footer>
+                    <div class="skills-container">
+
+                        <span class="skill-tag">
+                            MySQL
+                        </span>
+
+                        <span class="skill-tag">
+                            MongoDB
+                        </span>
+
+                        <span class="skill-tag">
+                            SQLAlchemy
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="skills-group">
+
+                    <h3>Tools</h3>
+
+                    <div class="skills-container">
+
+                        <span class="skill-tag">
+                            Git
+                        </span>
+
+                        <span class="skill-tag">
+                            GitHub
+                        </span>
+
+                        <span class="skill-tag">
+                            Kaggle
+                        </span>
+
+                        <span class="skill-tag">
+                            Google Colab
+                        </span>
+
+                        <span class="skill-tag">
+                            VSCode
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- 프로젝트 -->
+            <section id="portfolio">
+
+                <h2>Projects</h2>
+
+                <!-- 프로젝트 1 -->
+                <article class="experience-item">
+
+                    <div class="experience-info">
+
+                        <span class="company">
+                            흉부 X-ray 결핵 분류
+                        </span>
+
+                        <span class="period">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="role">
+
+                        <span class="position">
+                            Deep Learning Classification
+                        </span>
+
+                    </div>
+
+                    <div class="project">
+
+                        <ul class="details">
+
+                            <li>
+                                ResNet18 전이학습을 활용한 흉부 X-ray 결핵 분류 모델 개발
+                            </li>
+
+                            <li>
+                                클래스 불균형 문제를 해결하기 위해 가중치 기반 손실함수 적용
+                            </li>
+
+                            <li>
+                                Accuracy, Precision, Recall, F1-score, AUROC를 활용한 성능 평가
+                            </li>
+
+                            <li>
+                                최종 테스트 AUROC 0.9988 달성
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+                <!-- 프로젝트 2 -->
+                <article class="experience-item">
+
+                    <div class="experience-info">
+
+                        <span class="company">
+                            뇌 MRI 종양 분할
+                        </span>
+
+                        <span class="period">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="role">
+
+                        <span class="position">
+                            Medical Image Segmentation
+                        </span>
+
+                    </div>
+
+                    <div class="project">
+
+                        <ul class="details">
+
+                            <li>
+                                MRI 영상과 종양 Mask 3,929쌍을 활용한 데이터 구성
+                            </li>
+
+                            <li>
+                                U-Net 기반 뇌종양 영역 분할 모델 학습
+                            </li>
+
+                            <li>
+                                Dice Score와 종양 완전 누락률을 활용한 모델 평가
+                            </li>
+
+                            <li>
+                                예측 Threshold 조정을 통한 분할 성능 비교
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+                <!-- 프로젝트 3 -->
+                <article class="experience-item">
+
+                    <div class="experience-info">
+
+                        <span class="company">
+                            VinBigData 흉부 이상 소견 탐지
+                        </span>
+
+                        <span class="period">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="role">
+
+                        <span class="position">
+                            Object Detection
+                        </span>
+
+                    </div>
+
+                    <div class="project">
+
+                        <ul class="details">
+
+                            <li>
+                                흉부 X-ray 영상의 이상 소견 위치를 탐지하는 객체 탐지 모델 개발
+                            </li>
+
+                            <li>
+                                YOLOv8을 활용한 Bounding Box 기반 학습 수행
+                            </li>
+
+                            <li>
+                                의료영상 데이터와 YOLO 형식의 라벨 연결 및 전처리
+                            </li>
+
+                            <li>
+                                예측 이미지 시각화를 통한 탐지 결과 확인
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+                <!-- 프로젝트 4 -->
+                <article class="experience-item">
+
+                    <div class="experience-info">
+
+                        <span class="company">
+                            CT DICOM 영상 전처리
+                        </span>
+
+                        <span class="period">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="role">
+
+                        <span class="position">
+                            Medical Image Preprocessing
+                        </span>
+
+                    </div>
+
+                    <div class="project">
+
+                        <ul class="details">
+
+                            <li>
+                                pydicom을 활용한 CT DICOM 파일 및 주요 Header 정보 확인
+                            </li>
+
+                            <li>
+                                원본 Pixel 값을 Hounsfield Unit으로 변환
+                            </li>
+
+                            <li>
+                                Soft Tissue Window와 Lung Window 적용 및 비교
+                            </li>
+
+                            <li>
+                                전처리 영상을 PyTorch 모델 입력 형태로 변환
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+                <!-- 프로젝트 5 -->
+                <article class="experience-item">
+
+                    <div class="experience-info">
+
+                        <span class="company">
+                            난임 임신 성공 예측
+                        </span>
+
+                        <span class="period">
+                            2026
+                        </span>
+
+                    </div>
+
+                    <div class="role">
+
+                        <span class="position">
+                            Machine Learning Classification
+                        </span>
+
+                    </div>
+
+                    <div class="project">
+
+                        <ul class="details">
+
+                            <li>
+                                난임 시술 데이터를 활용한 임신 성공 확률 예측 모델 개발
+                            </li>
+
+                            <li>
+                                LightGBM, CatBoost, XGBoost 모델 성능 비교
+                            </li>
+
+                            <li>
+                                교차검증과 Optuna를 활용한 하이퍼파라미터 최적화
+                            </li>
+
+                            <li>
+                                Feature Importance와 SHAP을 활용한 주요 변수 분석
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- 학력 -->
+            <section id="education">
+
+                <h2>Education</h2>
+
+                <table class="education-table">
+
+                    <tr>
+
+                        <th>
+                            기간 입력
+                        </th>
+
+                        <td>
+                            대학교명 입력 · 생명과학 석사
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>
+                            기간 입력
+                        </th>
+
+                        <td>
+                            대학교명 입력 · 전공명 입력
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <!-- 연구 경험 -->
+            <section>
+
+                <h2>Research Experience</h2>
+
+                <table class="education-table">
+
+                    <tr>
+
+                        <th>
+                            기간 입력
+                        </th>
+
+                        <td>
+                            난임 및 배아 관련 생명과학 연구 경험
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <!-- 자격 및 교육 -->
+            <section>
+
+                <h2>Certifications</h2>
+
+                <table class="education-table">
+
+                    <tr>
+
+                        <th>
+                            2026
+                        </th>
+
+                        <td>
+                            정보처리기사 필기 합격
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>
+                            기간 입력
+                        </th>
+
+                        <td>
+                            의료 AI 및 데이터 분석 교육 과정
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
 
 </body>
+
 </html>
